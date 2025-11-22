@@ -15,6 +15,13 @@ void inputKeranjang(Barang brg[], int id, int banyakBarang){
 
 }
 
+void resetKeranjang(Barang brg[], int banyakBarang){
+    for(int i=0;i<banyakBarang;i++){
+        brg[i].terisi = 0;
+        brg[i].jumlah = 0;
+    }
+}
+
 void printKeranjang(Barang brg[], int banyakBarang){
     int no = 0;
     for(int i=0;i<banyakBarang;i++){
@@ -73,6 +80,48 @@ void printTotalBelanja(Barang brg[], int banyakBarang){
         }
     }
     printf("Total: %.0f\n",total);
+}
+
+void totalBelanjaan(Barang brg[], int banyakBarang){
+    int uang, run = 1;
+    float total=0;
+    printf("Masukan uang: ");
+    scanf("%d", &uang);
+
+    for(int i=0;i<banyakBarang;i++){
+        if(brg[i].terisi == 1){
+            total += (brg[i].harga * brg[i].jumlah * (1 - brg[i].diskon));
+        }
+    }
+
+    printf("=======================================\n");
+    printf("Uang: %d\n", uang);
+    printf("Total: %.0f\n", total);
+    if(uang >= total){
+        printf("Kembalian: %.0f\n", ((float)uang - total));
+    }else{
+        printf("Maaf, Uang Kurang\n");
+    }
+    printf("=======================================\n\n");
+
+    while(run){
+        int pilih;
+        printf("Apakah Masih Ingin Mengedit Barang?\n");
+        printf("1. Ya\n");
+        printf("2. Tidak\n");
+        printf("Masukan Angka diatas: ");
+        scanf("%d", &pilih);
+        if(pilih == 1){
+            break;
+        }else if(pilih == 2){
+            resetKeranjang(brg,banyakBarang);
+            break;
+        }else{
+            printf("\nError: Input Salah!\n");
+        }
+
+    }
+    
 }
 
 void kasir(Barang brg[], int banyakBarang){
@@ -160,7 +209,8 @@ void kasir(Barang brg[], int banyakBarang){
             }
 
             if(valid){
-                printf("Valid\n");
+                totalBelanjaan(brg,banyakBarang);
+
             }else{
                 printf("\nError: Mohon Masukan Barang Terlebih Dahulu!\n");
             }

@@ -1,7 +1,23 @@
 #include <stdio.h>
-#include "data.h"
+#include "menu.h"
 #include "barang.h"
 
+/*Print keranjang, 
+(jika variabel "terisi" = 1, maka artinya dimasukan ke keranjang)*/
+void printKeranjang(Barang brg[], int banyakBarang){
+    int no = 0;
+    for(int i=0;i<banyakBarang;i++){
+        if(brg[i].terisi == 1){
+            no++;
+            float harga = brg[i].harga * brg[i].jumlah * (1 - brg[i].diskon);
+            printf("%-3d %-15s %-8d %-8d %-12.0f %.0f%c\n",
+               no, brg[i].nama, brg[i].ID ,brg[i].jumlah, harga, (brg[i].diskon * 100),'%');
+        }
+    }
+}
+
+/*Memasukan barang ke keranjang dengan ID, 
+(Menambah variabel "terisi" dan "jumlah" pada barang dengan ID ditentukan) */
 void inputKeranjang(Barang brg[], int id, int banyakBarang){
     int jumlah;
     printf("Masukan banyak Barang: ");
@@ -15,6 +31,8 @@ void inputKeranjang(Barang brg[], int id, int banyakBarang){
 
 }
 
+/*Mereset keranjang menjadi kosong, 
+(membuat semua barang variabel "terisi" dan "jumlah" = 0) */
 void resetKeranjang(Barang brg[], int banyakBarang){
     for(int i=0;i<banyakBarang;i++){
         brg[i].terisi = 0;
@@ -22,19 +40,8 @@ void resetKeranjang(Barang brg[], int banyakBarang){
     }
 }
 
-void printKeranjang(Barang brg[], int banyakBarang){
-    int no = 0;
-    for(int i=0;i<banyakBarang;i++){
-        if(brg[i].terisi == 1){
-            no++;
-            float harga = brg[i].harga * brg[i].jumlah * (1 - brg[i].diskon);
-            printf("%-3d %-15s %-8d %-8d %-12.0f %.0f%c\n",
-               no, brg[i].nama, brg[i].ID ,brg[i].jumlah, harga, (brg[i].diskon * 100),'%');
-        }
-    }
-}
 
-
+//Melihat apakah ID yang diberikan ada didalam barang
 int validID(Barang brg[], int id, int panjangBarang){
     int temp= 0;
     for(int i=0; i<panjangBarang; i++){
@@ -49,6 +56,8 @@ int validID(Barang brg[], int id, int panjangBarang){
     }
 }
 
+/*Melihat apakah barang dengan ID yang diberikan terisi/masuk keranjang, 
+(Melihat variabel "terisi" apakah 0 atau 1) */
 int validIsi(Barang brg[], int idBarang, int panjangBarang){
     int temp= 0;
     for(int i=0; i<panjangBarang; i++){
@@ -63,6 +72,8 @@ int validIsi(Barang brg[], int idBarang, int panjangBarang){
     }
 }
 
+/*Menghapus barang dengan id yang diberikan pada keranjang, 
+(mengubah variabel "terisi" dan "jumlah" barang dengan id yang diberikan )*/
 void hapusKeranjang(Barang brg[], int id, int banyakBarang){
     for(int i=0;i<banyakBarang;i++){
         if(brg[i].ID == id){
@@ -72,6 +83,7 @@ void hapusKeranjang(Barang brg[], int id, int banyakBarang){
     }
 }
 
+//Menghitung total belanja pada keranjang dengan melihat "harga","jumlah", dan "diskon"
 void printTotalBelanja(Barang brg[], int banyakBarang){
     float total = 0.0;
     for(int i=0;i<banyakBarang;i++){
@@ -82,6 +94,8 @@ void printTotalBelanja(Barang brg[], int banyakBarang){
     printf("Total: %.0f\n",total);
 }
 
+
+//Menghitung total belanja untuk dibayar, dan input uang
 void totalBelanjaan(Barang brg[], int banyakBarang){
     int uang, run = 1;
     float total=0;
@@ -124,6 +138,8 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
     
 }
 
+
+//Program utama, dan menu kasir
 void kasir(Barang brg[], int banyakBarang){
     int running = 1;
 

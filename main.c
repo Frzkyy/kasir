@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include "barang.h"
-#include "util.h"
-#include "data.h"
+#include "tools.h"
+#include "menu.h"
 
+
+//memasukan barang ke dalam database
 int main()
 {
     int banyakBarang = 9;

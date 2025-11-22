@@ -1,5 +1,5 @@
-#ifndef DATA_H
-#define DATA_H
+#ifndef MENU_H
+#define MENU_H
 #include "barang.h"
 
 void totalBelanjaan(Barang brg[], int banyakBarang);

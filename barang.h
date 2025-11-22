@@ -1,6 +1,8 @@
 #ifndef BARANG_H
 #define BARANG_H
 
+/*tipe data Barang, untuk menyimpan ID("ID"), Nama("nama"), Harga("harga"), Diskon("diskon"), 
+Apakah dimasukan ke keranjang("terisi"), dan jumlah jika dimasukan ke keranjang("jumlah")*/
 typedef struct
 {
     int ID;
@@ -11,9 +13,9 @@ typedef struct
     int jumlah;
 } Barang;
 
-void printBarang(Barang brg);
+
 void printList(Barang brg[], int banyakBarang);
 void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon);
-void cariBarang(Barang brg[], int id, int banyakBarang);
+
 
 #endif

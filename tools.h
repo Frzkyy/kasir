@@ -1,5 +1,5 @@
-#ifndef UTIL_H
-#define UTIL_H
+#ifndef TOOLS_H
+#define TOOLS_H
 
 void strcopy(char tujuan[], const char masukan[]);
 

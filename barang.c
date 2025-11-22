@@ -1,15 +1,8 @@
 #include <stdio.h>
 #include "barang.h"
-#include "util.h"
+#include "tools.h"
 
-// Print detail barang
-void printBarang(Barang brg){
-    printf("ID: %d\n", brg.ID);
-    printf("Nama: %s\n", brg.nama);
-    printf("Harga: %d\n", brg.harga);
-    printf("Diskon: %.2f\n", brg.diskon);
-}
-
+//print seluruh variabel "Id","Nama","Harga","Diskon" barang dalam bentuk list
 void printList(Barang brg[], int banyakBarang){
     printf("\n================================\n");
     printf("%-3s %-5s %-12s %-10s %-8s\n", "No", "ID", "Nama", "Harga", "Diskon");
@@ -24,6 +17,7 @@ void printList(Barang brg[], int banyakBarang){
     printf("\n");
 }
 
+//Input barang ke dalam database
 void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon){
     strcopy(brg->nama, name);
     brg->ID = id;
@@ -31,13 +25,4 @@ void inputBarang(Barang brg[], int id, const char name[], int harga, float disko
     brg->diskon = diskon;
     brg->jumlah = 0;
     brg->terisi = 0;
-}
-
-void cariBarang(Barang brg[], int id, int banyakBarang){
-    
-    for(int i =0; i<banyakBarang; i++){
-        if(brg[i].ID == id){
-            printBarang(brg[i]);
-        }
-    }
 }

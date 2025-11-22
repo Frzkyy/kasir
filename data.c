@@ -2,7 +2,7 @@
 #include "data.h"
 #include "barang.h"
 
-void kasir(Barang *brg, int banyakBarang){
+void kasir(Barang brg[], int banyakBarang){
 
     int running = 1;
     while(running){

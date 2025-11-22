@@ -1,7 +1,7 @@
 #include "util.h"
 
 // Copy string manual
-void strcopy(char* tujuan, const char* masukan) {
+void strcopy(char tujuan[], const char masukan[]) {
     int i = 0;
     while (masukan[i] != '\0') {
         tujuan[i] = masukan[i];

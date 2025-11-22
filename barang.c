@@ -10,7 +10,7 @@ void printBarang(Barang brg){
     printf("Diskon: %.2f\n", brg.diskon);
 }
 
-void printList(Barang *brg, int banyakBarang){
+void printList(Barang brg[], int banyakBarang){
     printf("%-3s %-5s %-12s %-10s %-8s\n", "No", "ID", "Nama", "Harga", "Diskon");
     for(int i = 0; i < banyakBarang; i++){
         printf("%-3d %-5d %-12s %-10d %-8.2f\n",
@@ -18,14 +18,14 @@ void printList(Barang *brg, int banyakBarang){
     }
 }
 
-void inputBarang(Barang *brg, int id, const char *name, int harga, float diskon){
+void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon){
     strcopy(brg->nama, name);
     brg->ID = id;
     brg->harga = harga;
     brg->diskon = diskon;
 }
 
-void cariBarang(Barang *brg, int id, int banyakBarang){
+void cariBarang(Barang brg[], int id, int banyakBarang){
     
     for(int i =0; i<banyakBarang; i++){
         if(brg[i].ID == id){

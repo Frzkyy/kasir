@@ -20,33 +20,7 @@ int main()
     inputBarang(&daftarBarang[8], 204, "Parfum", 50000, 0);
     inputBarang(&daftarBarang[9], 205, "Pepsoden", 30000, 0);
 
-    
-    while(run){
-        printMenuUtama(&pilih);
-        switch (pilih)
-        {
-        case 1:
-            printf("\n================================\n");
-            printList(daftarBarang, banyakBarang);
-            printf("================================\n");
-            printf("Tekan enter untuk melanjutkan");
-            getchar();
-            getchar();
-            break;
-        case 2:
-            kasir(daftarBarang, banyakBarang);
-            break;
-        case 0:
-            printf("\nTerima Kasih :)\nTekan tombol apapun untuk keluar");
-            getchar();
-            getchar();
-            run=0;
-        
-        default:
-            printf("\nInput Salah! \n");
-            break;
-        }
-    }
+    kasir(daftarBarang, banyakBarang);
 
     return 0;
 }

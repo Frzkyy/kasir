@@ -2,23 +2,15 @@
 #include "data.h"
 #include "barang.h"
 
-void printMenuUtama(int *pilih){
-    printf("\nSelamat Datang di Indomaret\n");
-    printf("======================\n");
-    printf("1. List Barang\n");
-    printf("2. Belanja\n");
-    printf("0. Keluar\n");
-    printf("======================\n");
-    printf("Ketik angka diatas untuk melanjutkan: ");
-    scanf("%d", pilih);
-}
-
 void kasir(Barang *brg, int banyakBarang){
 
     int running = 1;
     while(running){
+
         int temp;
-        printf("\n Menu Kasir\n");
+        printf("======================\n");
+        printf("Keranjang: \n");
+        printf("======================\n\n");
         printf("Masukan Produk Pelanggan\n");
         printf("======================\n");
         printf("1. List Barang\n");
@@ -36,14 +28,19 @@ void kasir(Barang *brg, int banyakBarang){
             printf("Tekan enter untuk melanjutkan");
             getchar();
             getchar();
+            printf("\n");
         }
 
         else if(temp == 0){
+            printf("\nTerima Kasih :) \n");
+            printf("Tekan enter untuk keluar");
+            getchar();
+            getchar();
             running = 0;
         }
 
         else{
-            printf("\nInput Salah!\n");
+            printf("Error: Input Salah!\n");
         }
     }
 }

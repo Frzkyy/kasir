@@ -10,8 +10,8 @@ typedef struct
 } Barang;
 
 void printBarang(Barang brg);
-void printList(Barang *brg, int banyakBarang);
-void inputBarang(Barang *brg, int id, const char *name, int harga, float diskon);
-void cariBarang(Barang *brg, int id, int banyakBarang);
+void printList(Barang brg[], int banyakBarang);
+void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon);
+void cariBarang(Barang brg[], int id, int banyakBarang);
 
 #endif

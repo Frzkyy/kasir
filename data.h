@@ -2,6 +2,6 @@
 #define DATA_H
 #include "barang.h"
 
-void kasir(Barang *brg, int banyakBarang);
+void kasir(Barang brg[], int banyakBarang);
 
 #endif

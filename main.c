@@ -7,7 +7,6 @@ int main()
 {
     int banyakBarang = 9;
     Barang daftarBarang[banyakBarang];
-    int pilih, run=1;
     
     inputBarang(&daftarBarang[0], 101, "Choclatos" ,1500, 0);
     inputBarang(&daftarBarang[1], 102, "Chiki" ,15000, 0);

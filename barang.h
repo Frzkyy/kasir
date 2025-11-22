@@ -7,6 +7,8 @@ typedef struct
     char nama[50];
     int harga;
     float diskon;
+    int terisi;
+    int jumlah;
 } Barang;
 
 void printBarang(Barang brg);

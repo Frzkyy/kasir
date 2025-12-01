@@ -108,7 +108,7 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
         }
     }
 
-    printf("=======================================\n");
+    printf("=============================================================================================\n");
     printf("Uang: %d\n", uang);
     printf("Total: %.0f\n", total);
     if(uang >= total){
@@ -116,7 +116,7 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
     }else{
         printf("Maaf, Uang Kurang\n");
     }
-    printf("=======================================\n\n");
+    printf("=============================================================================================\n\n");
 
     while(run){
         int pilih;

@@ -7,6 +7,7 @@
 //memasukan barang ke dalam database
 int main()
 {
+    //banyakBarang wajib sama dengan banyak barang yang akan diinput ke array
     const int banyakBarang = 10;
     Barang daftarBarang[banyakBarang];
     

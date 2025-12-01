@@ -158,7 +158,7 @@ void kasir(Barang brg[], int banyakBarang){
         printf("_____________________________________________________________________________________________\n");
         printf("                               Menu Pilihan\n\n");
         printf(">> 1. List Barang\n");
-        printf(">> 2. Tambahkan Barang\n");
+        printf(">> 2. Tambahkan/Edit Barang\n");
         printf(">> 3. Hapus Barang\n");
         printf(">> 4. Selesai\n");
         printf(">> 0. Keluar\n");

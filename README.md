@@ -29,10 +29,11 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 
 ## Cara Melakukan Kompilasi
 
+Pada terminal:
 ```
 gcc main.c tools.c tools.h barang.h barang.c menu.h menu.c -o main
 ```
-Lalu Jalankan
+Lalu jalankan
 ```
 ./main
 ```
@@ -42,7 +43,7 @@ Lalu Jalankan
 Program ini hanya membutuhkan:
 - Compiler C (GCC/MinGW/Clang)
 - Terminal / Command Prompt
-Tidak ada library tambahan selain standard library C.
+- Tidak ada library tambahan selain standard library C.
 ---
 
 ## Penjelasan Singkat Modul

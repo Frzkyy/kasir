@@ -10,7 +10,7 @@ void printKeranjang(Barang brg[], int banyakBarang){
         if(brg[i].terisi == 1){
             no++;
             float harga = brg[i].harga * brg[i].jumlah * (1 - brg[i].diskon);
-            printf("%-3d %-15s %-8d %-8d %-12.0f %.0f%c\n",
+            printf("%-3d %-45s %-8d %-8d %-12.0f %.0f%c\n",
                no, brg[i].nama, brg[i].ID ,brg[i].jumlah, harga, (brg[i].diskon * 100),'%');
         }
     }
@@ -150,7 +150,7 @@ void kasir(Barang brg[], int banyakBarang){
 
         printf("Keranjang Belanja:\n");
         printf("---------------------------------------------------------------------------------------------\n");
-        printf("%-3s %-15s %-8s %-8s %-12s %s\n", "No", "Nama", "ID", "Jumlah", "Harga", "Diskon");
+        printf("%-3s %-45s %-8s %-8s %-12s %s\n", "No", "Nama", "ID", "Jumlah", "Harga", "Diskon");
         printf("---------------------------------------------------------------------------------------------\n");
 
         printKeranjang(brg, banyakBarang);

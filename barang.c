@@ -5,9 +5,9 @@
 //print seluruh variabel "Id","Nama","Harga","Diskon" barang dalam bentuk list
 void printList(Barang brg[], int banyakBarang){
     printf("\n=============================================================================================\n");
-    printf("%-3s %-5s %-12s %-10s %-8s\n", "No", "ID", "Nama", "Harga", "Diskon");
+    printf("%-3s %-5s %-45s %-10s %-8s\n", "No", "ID", "Nama", "Harga", "Diskon");
     for(int i = 0; i < banyakBarang; i++){
-        printf("%-3d %-5d %-12s %-10d %-8.2f\n",
+        printf("%-3d %-5d %-45s %-10d %-8.2f\n",
                i+1, brg[i].ID, brg[i].nama, brg[i].harga, brg[i].diskon);
     }
     printf("\n=============================================================================================\n");

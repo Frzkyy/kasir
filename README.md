@@ -21,3 +21,13 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 
 ## 📁 Struktur File
 
+├── main.c
+├── menu.c
+├── menu.h
+├── barang.c
+├── barang.h
+├── tools.c
+├── tools.h
+├── main.exe (file executable)
+└── README.md
+

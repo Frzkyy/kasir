@@ -139,7 +139,7 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
 }
 
 
-//Program utama, dan menu kasir
+//Program mesin kasir utama
 void kasir(Barang brg[], int banyakBarang){
     int running = 1;
     do{

@@ -4,7 +4,7 @@
 #include "menu.h"
 
 
-//memasukan barang ke dalam database
+//Program utama
 int main()
 {
     //banyakBarang wajib sama dengan banyak barang yang akan diinput ke array

@@ -14,7 +14,7 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 - Menampilkan kembalian berdasarkan uang yang dimasukkan
 - Reset otomatis keranjang setelah transaksi
 - Validasi ID barang dan validasi isi keranjang
----
+
 ## Struktur File
 
 main.c
@@ -41,7 +41,6 @@ Program ini hanya membutuhkan:
 - Terminal / Command Prompt
 Tidak ada library tambahan selain standard library C.
 ---
-
 ## Penjelasan Singkat Modul
 
 ### **1. barang.c / barang.h**

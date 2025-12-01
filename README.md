@@ -4,8 +4,8 @@ Program ini adalah aplikasi kasir sederhana yang dibuat menggunakan bahasa C.
 Aplikasi ini memiliki fitur untuk menampilkan daftar barang, memasukkan barang ke keranjang, menghapus barang, menghitung total belanja, dan melakukan transaksi.
 
 Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `tools.c`) agar mudah dibaca, dipelihara, dan dikembangkan.
----
 
+---
 ## Fitur
 
 - Menampilkan daftar barang
@@ -25,8 +25,8 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 - barang.c
 - menu.h
 - menu.c
----
 
+---
 ## Cara Melakukan Kompilasi
 
 Pada terminal:
@@ -37,15 +37,15 @@ Lalu jalankan
 ```
 ./main
 ```
----
 
+---
 ## Requirement
 Program ini hanya membutuhkan:
 - Compiler C (GCC/MinGW/Clang)
 - Terminal / Command Prompt
 - Tidak ada library tambahan selain standard library C.
----
 
+---
 ## Penjelasan Singkat Modul
 
 ### **1. barang.c / barang.h**

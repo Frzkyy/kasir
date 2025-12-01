@@ -5,6 +5,7 @@ Aplikasi ini memiliki fitur untuk menampilkan daftar barang, memasukkan barang k
 
 Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `tools.c`) agar mudah dibaca, dipelihara, dan dikembangkan.
 ---
+
 ## Fitur
 
 - Menampilkan daftar barang
@@ -17,14 +18,15 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 
 ## Struktur File
 
-main.c
-tools.h
-tools.c
-barang.h
-barang.c
-menu.h
-menu.c
+- main.c
+- tools.h
+- tools.c
+- barang.h
+- barang.c
+- menu.h
+- menu.c
 ---
+
 ## Cara Melakukan Kompilasi
 
 ```
@@ -35,12 +37,14 @@ Lalu Jalankan
 ./main
 ```
 ---
+
 ## Requirement
 Program ini hanya membutuhkan:
 - Compiler C (GCC/MinGW/Clang)
 - Terminal / Command Prompt
 Tidak ada library tambahan selain standard library C.
 ---
+
 ## Penjelasan Singkat Modul
 
 ### **1. barang.c / barang.h**

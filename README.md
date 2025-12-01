@@ -15,7 +15,7 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 - Reset otomatis keranjang setelah transaksi
 - Validasi ID barang dan validasi isi keranjang
 ---
-## 📁 Struktur File
+## Struktur File
 
 main.c
 tools.h
@@ -69,10 +69,3 @@ Berisi fungsi utilitas seperti:
 Tempat eksekusi program:
 - Inisialisasi barang  
 - Menjalankan menu kasir utama  
-
----
-
-## 🖥 Preview Program
-
-
-

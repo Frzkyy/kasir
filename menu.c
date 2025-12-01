@@ -142,11 +142,10 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
 //Program utama, dan menu kasir
 void kasir(Barang brg[], int banyakBarang){
     int running = 1;
-
-    while(running){
+    do{
         int temp;
         printf("\n=============================================================================================\n");
-        printf("                               Selamat Datang di Indomaret\n");
+        printf("                               Selamat Datang di Bubadibako\n");
         printf("=============================================================================================\n");
 
         printf("Keranjang:\n");
@@ -157,70 +156,70 @@ void kasir(Barang brg[], int banyakBarang){
         printf("_____________________________________________________________________________________________\n");
         printTotalBelanja(brg,banyakBarang);
         printf("_____________________________________________________________________________________________\n");
-        printf("                           Masukan Produk Pelanggan\n\n");
-        printf("1. List Barang\n");
-        printf("2. Tambahkan Barang\n");
-        printf("3. Hapus Barang\n");
-        printf("4. Selesai\n");
-        printf("0. Keluar\n");
+        printf("                               Menu Pilihan\n\n");
+        printf(">> 1. List Barang\n");
+        printf(">> 2. Tambahkan Barang\n");
+        printf(">> 3. Hapus Barang\n");
+        printf(">> 4. Selesai\n");
+        printf(">> 0. Keluar\n");
         printf("_____________________________________________________________________________________________\n");
         printf("Ketik angka diatas untuk melanjutkan: ");
         scanf("%d", &temp);
 
 
-        if(temp == 1){  
+        switch (temp){
+        case 1:
             printList(brg, banyakBarang);
-        }
-
-        else if(temp == 2){
-            int idBarang;
-            int runn = 1;
+            break;
+        
+        case 2:
             
-
-            while(runn){
+            while(1){
+                int idBarang;
                 printf("Masukan ID Barang, Jika tidak tahu ketik 0: ");
                 scanf("%d", &idBarang);
 
                 if(idBarang == 0){
-                    runn = 0;
+                    break;
                 }
                 else if(validID(brg, idBarang, banyakBarang)){
                     inputKeranjang(brg, idBarang, banyakBarang);
-                    runn = 0;
+                    break;
                 }
                 else{
                     printf("Error: ID tidak valid!\n");
                 }
             }
-        }
-
-        else if(temp == 3){
-            int idBarang;
-            int runn = 1;
-            while(runn){
+            break;
+        
+        case 3:
+            while(1){
+                int idBarang;
                 printf("Masukan ID Barang, Jika tidak tahu ketik 0: ");
                 scanf("%d", &idBarang);
 
                 if(idBarang == 0){
-                    runn=0;
+                    break;
                 }
                 else if(validID(brg, idBarang, banyakBarang) == 0){
                     printf("Error: ID tidak valid!\n");
                 }
                 else if(validIsi(brg, idBarang,banyakBarang)){
                     hapusKeranjang(brg,idBarang,banyakBarang);
-                    runn=0;
+                    break;
                 }
                 else{
                     printf("Error: Barang tidak ada di keranjang!\n");
                 }
             }
-        }
-        else if(temp == 4){
+            break;
+
+        case 4:
             int valid = 0;
             for(int i=0;i<banyakBarang;i++){
                 if(brg[i].terisi == 1){
                     valid = 1;
+                    break;
                 }
             }
 
@@ -230,19 +229,23 @@ void kasir(Barang brg[], int banyakBarang){
             }else{
                 printf("\nError: Mohon Masukan Barang Terlebih Dahulu!\n");
             }
-        }
-        else if(temp == 0){
+            break;
+
+        case 0:
             printf("\nTerima Kasih :) \n");
             printf("Tekan enter untuk keluar");
             getchar();
             getchar();
             running = 0;
-        }
+            break;
 
-        else{
+        default:
             printf("Error: Input Salah!\n");
-        }  
-    }
+            break;
+        }
+             
+    }while (running);
+    
 
 
 

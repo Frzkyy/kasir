@@ -18,7 +18,7 @@ void printList(Barang brg[], int banyakBarang){
 }
 
 //Input barang ke dalam database
-void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon){
+void inputBarang(Barang *brg, int id, const char name[], int harga, float diskon){
     strcopy(brg->nama, name);
     brg->ID = id;
     brg->harga = harga;

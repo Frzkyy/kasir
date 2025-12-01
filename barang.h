@@ -15,7 +15,7 @@ typedef struct
 
 
 void printList(Barang brg[], int banyakBarang);
-void inputBarang(Barang brg[], int id, const char name[], int harga, float diskon);
+void inputBarang(Barang *brg, int id, const char name[], int harga, float diskon);
 
 
 #endif

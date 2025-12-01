@@ -7,9 +7,10 @@
 //memasukan barang ke dalam database
 int main()
 {
-    int banyakBarang = 9;
+    const int banyakBarang = 10;
     Barang daftarBarang[banyakBarang];
     
+    //daftarBarang[i], ID, Nama, Harga, Diskon
     inputBarang(&daftarBarang[0], 101, "Choclatos" ,1500, 0);
     inputBarang(&daftarBarang[1], 102, "Chiki" ,15000, 0);
     inputBarang(&daftarBarang[2], 103, "Potato" ,10000, 0);
@@ -19,6 +20,7 @@ int main()
     inputBarang(&daftarBarang[6], 202, "Sampo", 20000, 0);
     inputBarang(&daftarBarang[7], 203, "Deterjen", 11000, 0);
     inputBarang(&daftarBarang[8], 204, "Parfum", 50000, 0);
+    inputBarang(&daftarBarang[9], 301, "Silverqueen", 15000, 0.15);
 
     kasir(daftarBarang, banyakBarang);
 

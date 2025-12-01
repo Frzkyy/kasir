@@ -9,5 +9,7 @@ void hapusKeranjang(Barang brg[], int id, int banyakBarang);
 int validIsi(Barang brg[], int idBarang,int panjangBarang);
 void kasir(Barang brg[], int banyakBarang);
 int validID(Barang brg[], int id, int panjangBarang);
+void inputKeranjang(Barang brg[], int id, int banyakBarang);
+void printKeranjang(Barang brg[], int banyakBarang);
 
 #endif

@@ -30,7 +30,7 @@ Struktur program dibagi menjadi beberapa file (`main.c`, `menu.c`, `barang.c`, `
 ## Cara Melakukan Kompilasi
 
 ```
-gcc meain.c tools.c tools.h barang.h barang.c menu.h menu.c -o main
+gcc main.c tools.c tools.h barang.h barang.c menu.h menu.c -o main
 ```
 Lalu Jalankan
 ```

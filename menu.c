@@ -141,7 +141,7 @@ void totalBelanjaan(Barang brg[], int banyakBarang){
 
 //Program mesin kasir utama
 void kasir(Barang brg[], int banyakBarang){
-    int running = 1;
+    int running = 1, valid;
     do{
         int temp;
         printf("\n=============================================================================================\n");
@@ -218,8 +218,8 @@ void kasir(Barang brg[], int banyakBarang){
             }
             break;
 
-        case 4:
-            int valid = 0;
+        case 4: 
+            valid = 0;
             for(int i=0;i<banyakBarang;i++){
                 if(brg[i].terisi == 1){
                     valid = 1;
